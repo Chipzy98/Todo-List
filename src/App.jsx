@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function TodoList() {
+function App() {
     const [items, setItems] = useState([]);
     const [newItem, setNewItem] = useState('');
     const [editIndex, setEditIndex] = useState(null);
@@ -81,4 +81,4 @@ function TodoList() {
     );
 }
 
-export default TodoList;
+export default App;
