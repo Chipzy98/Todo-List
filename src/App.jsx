@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './styles/globle.css'; // Import the CSS file
 
 function App() {
     const [items, setItems] = useState([]);
@@ -32,7 +33,7 @@ function App() {
     };
 
     return (
-        <div className="container">
+        <div className="container" style={{backgroundColor: '#ADD8E6'}}>
             <div className="row">
                 <div className="col-md-6 offset-md-3">
                     <h1 className="text-center">Todo List</h1>
@@ -45,9 +46,9 @@ function App() {
                             onChange={(e) => setNewItem(e.target.value)}
                         />
                         <div className="input-group-append">
-                            <button
-                                className="btn btn-outline-secondary"
+                            <button className="btn btn-outline-secondary"
                                 type="button"
+                                style={{ backgroundColor: 'green', color: 'white', margin: '10px' }}
                                 onClick={handleAdd}
                             >
                                 {editIndex !== null ? 'Update' : 'Add'}
@@ -61,12 +62,14 @@ function App() {
                                 <div>
                                     <button
                                         className="btn btn-primary btn-sm mr-2"
+                                        style={{ margin: '10px' }}
                                         onClick={() => handleEdit(index)}
                                     >
                                         Edit
                                     </button>
                                     <button
                                         className="btn btn-danger btn-sm"
+                                        style={{ margin: '10px' }}
                                         onClick={() => handleDelete(index)}
                                     >
                                         Delete
